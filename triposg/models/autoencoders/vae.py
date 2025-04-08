@@ -1,3 +1,8 @@
+"""
+这是一个Python文件,定义在TripoSG项目的变分自动编码器(VAE)模块中。
+文件定义了 `DiagonalGaussianDistribution` 类,用于处理高斯分布。该类能计算均值、标准差、方差等统计量,并实现从分布中采样、计算Kullback-Leibler散度(KL)、负对数似然(NLL)以及获取分布的众数等功能。
+代码使用了PyTorch进行张量计算,并借助 `diffusers.utils.torch_utils` 中的 `randn_tensor` 函数生成随机张量。
+"""
 from typing import Optional, Tuple
 
 import numpy as np

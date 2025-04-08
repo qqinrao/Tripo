@@ -1,3 +1,11 @@
+#提供对TripoSG模型的推理接口
+"""
+处理输入图像
+调用背景去除模型
+初始化TripoSG管道
+运行推理过程
+导出生成的 3D模型
+"""
 import argparse
 import os
 import sys

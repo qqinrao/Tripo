@@ -1,3 +1,8 @@
+#包含TripoSG模型的核心 transformer 架构
+"""
+基于 Tencent HunyuanDiT 修改的大规模整流流变换器
+实现从图像特征到 3D 表示的生成过程
+"""
 # Copyright (c) 2025 VAST-AI-Research and contributors
 
 # This code is based on Tencent HunyuanDiT (https://huggingface.co/Tencent-Hunyuan/HunyuanDiT),
@@ -90,6 +95,16 @@
 # Please note that the use of this code is subject to the terms and conditions
 # of the Tencent Hunyuan Community License Agreement, including the Acceptable Use Policy.
 
+"""
+该Python文件`triposg_transformer.py`主要实现基于Transformer的扩散模型TripoSGDiT。
+文件开头声明部分代码基于Tencent HunyuanDiT,遵循腾讯混元社区许可协议。
+"""
+"""
+DiTBlock类:为模型的Transformer模块,包含自注意力、交叉注意力和前馈网络部分,支持跳跃连接和QKNorm,以构建深层架构。
+"""
+"""
+TripoSGDiTModel类:继承多个Mixin以获功能,实现了TripoSG核心模型,包含时间嵌入、投影层和Transformer模块序列,    还提供设置和管理注意力处理器方法。可选择启用或禁用QKV融合投影、前向分块等实验性功能。 该模型用于生成或处理基于Transformer架构的相关任务。 
+"""
 from typing import Any, Dict, Optional, Tuple, Union
 
 import torch

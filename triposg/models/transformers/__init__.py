@@ -1,3 +1,9 @@
+"""
+引入`TripoSGDiTModel`类。
+定义两个函数：
+`default_set_attn_proc_func`返回原始注意力处理程序； 
+`set_transformer_attn_processor`,基于不同名称和给定条件,有选择地设置Transformer模型 `TripoSGDiTModel` 中不同类型注意力处理器。 
+"""
 from typing import Callable, Optional
 
 from .triposg_transformer import TripoSGDiTModel

@@ -1,3 +1,8 @@
+"""
+这个`embeddings.py`文件定义了`FrequencyPositionalEmbedding`类，用于生成正弦/余弦位置嵌入。
+它可将输入张量按指定频率和参数进行转换，构造位置嵌入。
+类接受诸如频率数量、是否对数间隔、输入维度和是否包含输入等参数，其前向传播方法返回转换后的嵌入张量，此外类还有获取输出维度的辅助方法。 
+"""
 import torch
 import torch.nn as nn
 
@@ -77,7 +82,7 @@ class FrequencyPositionalEmbedding(nn.Module):
         """Forward process.
 
         Args:
-            x: tensor of shape [..., dim]
+            x: tensor of shape [... , dim]
 
         Returns:
             embedding: an embedding of `x` of shape [..., dim * (num_freqs * 2 + temp)]

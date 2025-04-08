@@ -1,3 +1,12 @@
+"""
+该Python文件定义了用于 TripoSG 的自动编码器模型。包含以下关键部分：
+
+ - 导入:引入PyTorch相关库、`diffusers`的配置与模型模块、自定义模块以及其他辅助库。
+ - 编码器:TripoSGEncoder`把输入转换为隐藏状态，结合了交叉注意力和自注意力块。
+ - 解码器:TripoSGDecoder`通过注意力块处理数据，结合`query_geometry`实现几何查询，输出预测值与缓存。
+ - 主模型:TripoSGVAEModel`整合编码器、解码器，实现编码、解码功能，并提供了诸如融合注意力投影等附加功能。
+ - 其他方法:如采样、启用/禁用切片，控制自动编码器行为。 
+"""
 from typing import Dict, List, Optional, Tuple, Union
 
 import numpy as np
